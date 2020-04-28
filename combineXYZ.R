@@ -22,7 +22,7 @@ combineXYZ <- function(folderString, crsString, save=TRUE, filename='merge.tif')
   # ------------------------
   
   # list XYZ files in folder:
-  fileList <- list.files(path=folderString, pattern = '.xyz')
+  fileList <- list.files(path=folderString, pattern = '.xyz', full.names = TRUE)
   
   # create first raster from XYZ:
   df <- read.table(fileList[[1]])
